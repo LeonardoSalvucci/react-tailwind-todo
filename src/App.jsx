@@ -32,12 +32,17 @@ function App() {
     setTask(tasks.filter((task) => task.id !== id));
   };
 
+  const handleAdd = (task) => {
+    task.id = new Date().getTime();
+    setTask([...tasks, task]);
+  };
+
   return (
     <div className="App flex bg-gradient-to-r from-blue-500 to-teal-200 justify-center items-center h-screen w-screen">
       <Container>
         <div className="flex flex-col flex-1 p-5 items-top gap-5">
           {/* add task */}
-          <AddTask />
+          <AddTask onAdd={handleAdd} />
 
           {/* tasks items */}
           {tasks
