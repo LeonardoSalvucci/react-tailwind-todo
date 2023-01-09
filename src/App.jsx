@@ -28,6 +28,8 @@ function App() {
 
           {/* separator */}
           <div className="w-full border border-blue-300"></div>
+
+          <TaskItem task="learn react" done />
         </div>
       </Container>
     </div>
