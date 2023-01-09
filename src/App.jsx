@@ -1,5 +1,7 @@
 import React from "react";
 import Container from "./components/Container";
+import TaskButton from "./components/TaskButton";
+
 function App() {
   return (
     <div className="App flex bg-gradient-to-r from-blue-500 to-teal-200 justify-center items-center h-screen w-screen">
@@ -24,18 +26,8 @@ function App() {
           <div className="bg-sky-100 rounded flex justify-between items-center gap-2 p-3 group hover:cursor-pointer hover:bg-slate-100 transition">
             <span className="flex-1 text-blue-500">learn redux</span>
             <div className="opacity-0 group-hover:opacity-100 flex gap-2 transition-opacity">
-              <button
-                type="button"
-                className="bg-sky-200 rounded-full w-6 h-6 flex justify-center items-center transition hover:bg-sky-500 hover:scale-125"
-              >
-                +
-              </button>
-              <button
-                type="button"
-                className="bg-sky-200 rounded-full w-6 h-6 flex justify-center items-center transition hover:bg-sky-500 hover:scale-125"
-              >
-                +
-              </button>
+              <TaskButton text="+" />
+              <TaskButton text="x" />
             </div>
           </div>
 
