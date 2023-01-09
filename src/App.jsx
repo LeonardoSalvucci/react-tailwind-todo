@@ -4,23 +4,7 @@ import TaskItem from "./components/TaskItem";
 import AddTask from "./components/AddTask";
 
 function App() {
-  const [tasks, setTask] = useState([
-    {
-      id: 0,
-      task: "Learn React",
-      done: false,
-    },
-    {
-      id: 1,
-      task: "Learn Typescript",
-      done: false,
-    },
-    {
-      id: 2,
-      task: "Learn React",
-      done: true,
-    },
-  ]);
+  const [tasks, setTask] = useState([]);
 
   const handleComplete = (id) => {
     setTask(
