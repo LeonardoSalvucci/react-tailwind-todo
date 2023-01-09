@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./components/Container";
-import TaskButton from "./components/TaskButton";
+import TaskItem from "./components/TaskItem";
 
 function App() {
   return (
@@ -23,13 +23,8 @@ function App() {
           </div>
 
           {/* tasks items */}
-          <div className="bg-sky-100 rounded flex justify-between items-center gap-2 p-3 group hover:cursor-pointer hover:bg-slate-100 transition">
-            <span className="flex-1 text-blue-500">learn redux</span>
-            <div className="opacity-0 group-hover:opacity-100 flex gap-2 transition-opacity">
-              <TaskButton text="+" />
-              <TaskButton text="x" />
-            </div>
-          </div>
+          <TaskItem task="learn react" />
+          <TaskItem task="learn typescript" />
 
           {/* separator */}
           <div className="w-full border border-blue-300"></div>
