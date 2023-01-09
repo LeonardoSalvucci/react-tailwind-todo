@@ -1,6 +1,7 @@
 import React from "react";
 import Container from "./components/Container";
 import TaskItem from "./components/TaskItem";
+import AddTask from "./components/AddTask";
 
 function App() {
   return (
@@ -8,19 +9,7 @@ function App() {
       <Container>
         <div className="flex flex-col flex-1 p-5 items-top gap-5">
           {/* add task */}
-          <div className="flex items-center">
-            <input
-              className="flex-1 border-2 rounded-l-md border-blue-500 p-3 "
-              type="text"
-              placeholder="Add a task here..."
-            />
-            <button
-              type="button"
-              className="border-2 rounded-r-md border-blue-500 text-white bg-blue-500 w-11 h-full text-3xl flex items-center justify-center"
-            >
-              +
-            </button>
-          </div>
+          <AddTask />
 
           {/* tasks items */}
           <TaskItem task="learn react" />
