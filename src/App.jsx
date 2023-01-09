@@ -21,23 +21,26 @@ function App() {
           </div>
 
           {/* tasks items */}
-          <div className="bg-sky-100 rounded flex justify-between items-center gap-2 p-3">
+          <div className="bg-sky-100 rounded flex justify-between items-center gap-2 p-3 group hover:cursor-pointer hover:bg-slate-100 transition">
             <span className="flex-1 text-blue-500">learn redux</span>
-            <div className="buttons">
+            <div className="opacity-0 group-hover:opacity-100 flex gap-2 transition-opacity">
               <button
                 type="button"
-                className="bg-sky-200 rounded-full w-6 h-6 flex justify-center items-center"
+                className="bg-sky-200 rounded-full w-6 h-6 flex justify-center items-center transition hover:bg-sky-500 hover:scale-125"
               >
                 +
               </button>
               <button
                 type="button"
-                className="bg-sky-200 rounded-full w-6 h-6 flex justify-center items-center"
+                className="bg-sky-200 rounded-full w-6 h-6 flex justify-center items-center transition hover:bg-sky-500 hover:scale-125"
               >
                 +
               </button>
             </div>
           </div>
+
+          {/* separator */}
+          <div className="w-full border border-blue-300"></div>
         </div>
       </Container>
     </div>
