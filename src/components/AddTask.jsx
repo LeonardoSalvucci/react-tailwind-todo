@@ -17,6 +17,9 @@ export default function ({ onAdd }) {
         placeholder="Add a task here..."
         value={task}
         onChange={(e) => setTask(e.target.value)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter") handleAdd();
+        }}
       />
       <button
         type="button"
