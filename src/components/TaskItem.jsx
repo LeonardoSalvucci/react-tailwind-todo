@@ -10,13 +10,15 @@ export default function ({ task, done }) {
       <span className="flex-1">{task}</span>
       {!done && (
         <div className="opacity-0 group-hover:opacity-100 flex gap-2 transition-opacity">
-          <TaskButton text="+" />
-          <TaskButton text="x" />
+          <TaskButton type="done" />
+          <TaskButton />
         </div>
       )}
       {done && (
-        <div className="bg-sky-100 text-center rounded-full h-7 w-7 text-blue-500">
-          O
+        <div className="bg-sky-100 text-center rounded-full text-blue-500 flex justify-center items-center p-1">
+          <span className="text-blue-500 font-bold material-symbols-outlined">
+            done
+          </span>
         </div>
       )}
     </div>
