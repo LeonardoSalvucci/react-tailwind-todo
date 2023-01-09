@@ -6,18 +6,31 @@ import AddTask from "./components/AddTask";
 function App() {
   const [tasks, setTask] = useState([
     {
+      id: 0,
       task: "Learn React",
       done: false,
     },
     {
+      id: 1,
       task: "Learn Typescript",
       done: false,
     },
     {
+      id: 2,
       task: "Learn React",
       done: true,
     },
   ]);
+
+  const handleComplete = (id) => {
+    setTask(
+      tasks.map((task) => (task.id === id ? { ...task, done: true } : task))
+    );
+  };
+
+  const handleRemove = (id) => {
+    setTask(tasks.filter((task) => task.id !== id));
+  };
 
   return (
     <div className="App flex bg-gradient-to-r from-blue-500 to-teal-200 justify-center items-center h-screen w-screen">
@@ -30,7 +43,12 @@ function App() {
           {tasks
             .filter((task) => !task.done)
             .map((task, index) => (
-              <TaskItem key={`task-${index}`} task={task.task} />
+              <TaskItem
+                key={`task-${index}`}
+                task={task}
+                onComplete={handleComplete}
+                onRemove={handleRemove}
+              />
             ))}
 
           {/* separator */}
@@ -40,7 +58,7 @@ function App() {
           {tasks
             .filter((task) => task.done)
             .map((task, index) => (
-              <TaskItem key={`task-${index}`} task={task.task} done />
+              <TaskItem key={`task-${index}`} task={task} done />
             ))}
         </div>
       </Container>
