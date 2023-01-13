@@ -10,6 +10,9 @@ This is just a workaround to explore vite with react and tailwind.
 
 This will start a server in http://localhost:5173
 
+# Live preview
+Access to this link https://react-tailwind-todo.vercel.app/
+
 # Screenshots
 
 ## Initial screen
